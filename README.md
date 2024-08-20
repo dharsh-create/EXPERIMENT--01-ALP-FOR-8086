@@ -85,28 +85,100 @@ ADD al,bl;
 MOV [6379h],al;
 ret
 
-```
-![Screenshot 2024-08-19 085917](https://github.com/user-attachments/assets/5dc756b6-c6a0-4f4d-bcd1-1af3d821e6c8)
-
-
-
-
-
 ## Output  
+![image](https://github.com/user-attachments/assets/4306c089-2a13-4c7c-ac7d-1bfb1fa71f09)
+
  
 ## Subtraction   of 8 bit numbers  ALP 
+
+org 100h
+MOV al,20h;
+MOV bl,[8778h];
+SUB bl,al;
+MOV [8798h],bl;
+ret
  
 ## Output  
+![image](https://github.com/user-attachments/assets/538965d3-d4a1-410d-843a-52e53c307f39)
+
+
 ## Multiplication alp 
+
+org 100h
+MOV al,13h;
+MOV bl,2h;
+MUL bl;
+MOV [6063h],bl;
+ret
+
  ## Output  
+ ![image](https://github.com/user-attachments/assets/bdcd7d70-f5e1-48fe-870e-efdd573d9f67)
 
 
 ## Division alp 
 
+org 100h
+MOV al,26h;
+MOV bl,[2369h];
+DIV bl;
+MOV [2399h],al;
+ret
+
 ## Output  
+![image](https://github.com/user-attachments/assets/e7189193-e3e8-41de-a23b-c27a17101e4b)
+
+## OR Operation
+
+org 100H
+MOV SI,0532H;
+MOV AX,0A32H;
+MOV BX,0B13H;
+OR AX,BX;
+ret
+
+## output
+![image](https://github.com/user-attachments/assets/c3416468-2575-4180-bb7f-b99735cf81f5)
+
+## AND Operation
+
+org 100H
+MOV [SI],AX;
+MOV AX,0A32H;
+MOV BX,0B13H;
+AND AX,BX;
+ret
+
+## output
+![image](https://github.com/user-attachments/assets/d8d7a7f9-e8e3-40a3-8a91-660ad7a35947)
+
+## XOR Operation
+
+org 100H
+MOV [SI+2],AX;
+MOV AX,0A32H;
+MOV BX,0B13H;
+XOR AX,BX;
+ret
+
+## output
+
+![image](https://github.com/user-attachments/assets/3055ec3d-3feb-408e-b83b-3a7ce8af0842)
+
+## NOT Operation
+
+org 100H
+MOV [SI+4],AX;
+MOV AX,0A32H;
+NOT AX;
+MOV [SI+6],AX;
+ret
+
+## output
+![image](https://github.com/user-attachments/assets/b0c0ce33-7678-4a67-9fb3-96e49d6dc84c)
 
 
 ## Result :
+Thus, ALP for fundamental arithmetic and logical operations are executed successfully.
  
 
 
